@@ -1,0 +1,14 @@
+set linenumbers
+set autoindent
+set tabsize 4
+set mouse
+set titlecolor bold,mauve
+set statuscolor bold,white,plum
+set errorcolor bold,white,crimson
+set spotlightcolor black,peach
+set selectedcolor white,purple
+set stripecolor ,mauve
+set scrollercolor ,plum
+set numbercolor mauve
+set keycolor peach
+set functioncolor tawny

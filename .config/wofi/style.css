@@ -1,0 +1,137 @@
+/* =================================================
+   OC PALETTE — LAUNCHER (wofi / rofi style)
+   ================================================= */
+
+@define-color oc-bg-main rgba(26, 22, 38, 0.95);
+@define-color oc-bg-inner rgba(42, 35, 66, 0.90);
+@define-color oc-bg-hover rgba(34, 28, 52, 0.90);
+
+@define-color oc-accent-purple rgb(175, 135, 215);
+@define-color oc-accent-orange rgb(225, 155, 90);
+
+@define-color oc-text-main rgb(245, 240, 250);
+@define-color oc-text-muted rgb(199, 189, 217);
+
+
+/* =================================================
+   GLOBAL RESET
+   ================================================= */
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-shadow: none;
+    background: transparent;
+    color: @oc-text-main;
+}
+
+
+/* =================================================
+   WINDOW
+   ================================================= */
+
+window {
+    all: unset;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: @oc-bg-main;
+    border: 1px solid rgba(175, 135, 215, 0.3);
+}
+
+
+/* =================================================
+   BOXES
+   ================================================= */
+
+#outer-box {
+    border: none;
+    min-width: 700px;
+}
+
+#inner-box {
+    margin: 2px;
+    padding: 6px;
+    border: none;
+    min-width: 700px;
+}
+
+#scroll {
+    margin: 0;
+    border: none;
+    min-width: 100%;
+}
+
+
+/* =================================================
+   INPUT
+   ================================================= */
+
+#input {
+    all: unset;
+    margin: 20px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background-color: @oc-bg-inner;
+    color: @oc-text-main;
+    box-shadow: 0 4px 12px rgba(94, 74, 127, 0.4);
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(175, 135, 215, 0.2);
+}
+
+#input image {
+    color: @oc-accent-purple;
+}
+
+#input * {
+    outline: none;
+}
+
+
+/* =================================================
+   ENTRIES
+   ================================================= */
+
+#entry {
+    margin: 6px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: transparent;
+}
+
+#entry arrow {
+    color: @oc-text-muted;
+}
+
+#text {
+    margin: 6px;
+    color: @oc-text-muted;
+}
+
+
+/* =================================================
+   SELECTED ENTRY (FOCUS)
+   ================================================= */
+
+#entry:selected {
+    background-color: rgba(175, 135, 215, 0.2);
+    border-radius: 14px;
+    border-left: 3px solid rgb(225, 155, 90);
+    box-shadow: 0 4px 10px rgba(94, 74, 127, 0.35);
+}
+
+#entry:selected #text {
+    color: @oc-text-main;
+}
+
+
+/* =================================================
+   HOVER
+   ================================================= */
+
+#entry:hover {
+    background-color: rgba(175, 135, 215, 0.1);
+    border-radius: 14px;
+}

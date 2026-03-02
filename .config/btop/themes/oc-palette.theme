@@ -1,0 +1,77 @@
+# OC Palette — Btop Theme
+# Dark purple base, warm orange accent
+
+# Main background
+theme[main_bg]="#1A1626"
+
+# Main text color
+theme[main_fg]="#F5F0FA"
+
+# Title color for boxes
+theme[title]="#AF87D7"
+
+# Highlight color for selected items
+theme[hi_fg]="#E19B5A"
+
+# Background for selected item in process list
+theme[selected_bg]="#2A2342"
+
+# Foreground for selected item in process list
+theme[selected_fg]="#F5F0FA"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#8F84A6"
+
+# Color of text appearing on top of graphs
+theme[graph_text]="#C7BDD9"
+
+# Background for meter and graph boxes
+theme[meter_bg]="#221C34"
+
+# Gradient colors for the cpu graph (left to right)
+theme[proc_misc]="#C7BDD9"
+
+# CPU box outline color
+theme[cpu_box]="#5E4A7F"
+
+# Memory/disks box outline color
+theme[mem_box]="#5E4A7F"
+
+# Network box outline color
+theme[net_box]="#5E4A7F"
+
+# Process box outline color
+theme[proc_box]="#5E4A7F"
+
+# Divider color between boxes
+theme[div_line]="#2A2342"
+
+# Temperature color low > high
+theme[temp_start]="#7BC8A4"
+theme[temp_mid]="#E19B5A"
+theme[temp_end]="#E85A6A"
+
+# CPU graph color (gradient start > end)
+theme[cpu_start]="#5E4A7F"
+theme[cpu_mid]="#AF87D7"
+theme[cpu_end]="#E19B5A"
+
+# Memory graph colors
+theme[mem_start]="#5E4A7F"
+theme[mem_mid]="#AF87D7"
+theme[mem_end]="#E19B5A"
+
+# Download graph colors
+theme[download_start]="#5E4A7F"
+theme[download_mid]="#AF87D7"
+theme[download_end]="#7BC8A4"
+
+# Upload graph colors
+theme[upload_start]="#5E4A7F"
+theme[upload_mid]="#AF87D7"
+theme[upload_end]="#E19B5A"
+
+# Process color gradient
+theme[process_start]="#AF87D7"
+theme[process_mid]="#E19B5A"
+theme[process_end]="#E85A6A"

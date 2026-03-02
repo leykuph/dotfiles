@@ -1,0 +1,190 @@
+# =================================================
+# OC PALETTE — STARSHIP PROMPT
+# =================================================
+
+format = """
+[](fg:#1A1626)\
+$os\
+$username\
+[](bg:#2A2342 fg:#1A1626)\
+$directory\
+[](fg:#2A2342 bg:#221C34)\
+$git_branch\
+$git_status\
+[](fg:#221C34 bg:none)\
+$fill\
+$cmd_duration\
+$line_break\
+$character"""
+
+right_format = """
+$status\
+"""
+
+palette = "oc"
+
+[palettes.oc]
+bg_main   = "#1A1626"
+bg_card   = "#221C34"
+bg_input  = "#2A2342"
+purple    = "#AF87D7"
+orange    = "#E19B5A"
+gold      = "#F2C86A"
+green     = "#7BC8A4"
+red       = "#E85A6A"
+muted     = "#C7BDD9"
+inactive  = "#8F84A6"
+
+
+# =================================================
+# OS ICON
+# =================================================
+
+[os]
+disabled = false
+format = "[$symbol]($style)"
+style = "bg:bg_main fg:purple bold"
+
+[os.symbols]
+Arch = " "
+Linux = " "
+
+
+# =================================================
+# USERNAME
+# =================================================
+
+[username]
+show_always = false
+format = "[ $user ]($style)"
+style_user = "bg:bg_main fg:muted"
+style_root = "bg:bg_main fg:red bold"
+
+
+# =================================================
+# DIRECTORY
+# =================================================
+
+[directory]
+format = "[ 󰉋 $path ]($style)[$read_only]($read_only_style)"
+style = "bg:bg_input fg:purple bold"
+read_only = " 󰌾"
+read_only_style = "bg:bg_input fg:red"
+truncation_length = 3
+truncate_to_repo = true
+truncation_symbol = "…/"
+
+
+# =================================================
+# GIT
+# =================================================
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+symbol = " "
+style = "bg:bg_card fg:purple"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+style = "bg:bg_card fg:orange"
+conflicted = "⚡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = " "
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+
+# =================================================
+# FILL (spacer)
+# =================================================
+
+[fill]
+symbol = " "
+
+
+# =================================================
+# CMD DURATION
+# =================================================
+
+[cmd_duration]
+format = "[ 󱦟 $duration ]($style)"
+style = "fg:inactive"
+min_time = 2_000
+show_milliseconds = false
+
+
+# =================================================
+# CHARACTER (prompt symbol)
+# =================================================
+
+[character]
+success_symbol = "[❯](bold fg:purple)"
+error_symbol   = "[❯](bold fg:red)"
+vimcmd_symbol  = "[❮](bold fg:green)"
+
+
+# =================================================
+# STATUS (right side)
+# =================================================
+
+[status]
+disabled = false
+format = "[$symbol$status]($style) "
+style = "fg:red"
+symbol = "✘ "
+success_symbol = ""
+not_executable_symbol = "🚫"
+not_found_symbol = "󰍉"
+sigint_symbol = "󰚌"
+signal_symbol = "󱐋"
+map_symbol = true
+
+
+# =================================================
+# LANGUAGES (only show when relevant)
+# =================================================
+
+[python]
+format = "[ $symbol$version ]($style)"
+symbol = " "
+style = "fg:gold"
+detect_files = ["*.py", "requirements.txt", "pyproject.toml"]
+
+[rust]
+format = "[ $symbol$version ]($style)"
+symbol = " "
+style = "fg:orange"
+
+[nodejs]
+format = "[ $symbol$version ]($style)"
+symbol = " "
+style = "fg:green"
+
+[c]
+format = "[ $symbol$version ]($style)"
+symbol = " "
+style = "fg:purple"
+
+[lua]
+format = "[ $symbol$version ]($style)"
+symbol = " "
+style = "fg:purple"
+
+
+# =================================================
+# MISC
+# =================================================
+
+[line_break]
+disabled = false
+
+[memory_usage]
+disabled = true
+
+[time]
+disabled = true

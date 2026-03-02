@@ -1,0 +1,216 @@
+# =================================================
+# OC PALETTE — YAZI THEME
+# =================================================
+
+[flavor]
+use = ""
+
+# -------------------------------------------------
+# MANAGER
+# -------------------------------------------------
+
+[manager]
+cwd = { fg = "#AF87D7", bold = true }
+
+# Hovered item
+hovered         = { fg = "#1A1626", bg = "#AF87D7", bold = true }
+preview_hovered = { underline = true }
+
+# Find results
+find_keyword  = { fg = "#E19B5A", bold = true, italic = true, underline = true }
+find_position = { fg = "#E19B5A", bg = "reset", bold = true, italic = true }
+
+# Marker highlights
+marker_copied   = { fg = "#7BC8A4", bg = "#7BC8A4" }
+marker_cut      = { fg = "#E85A6A", bg = "#E85A6A" }
+marker_marked   = { fg = "#AF87D7", bg = "#AF87D7" }
+marker_selected = { fg = "#E19B5A", bg = "#E19B5A" }
+
+# Tab bar
+tab_active   = { fg = "#1A1626", bg = "#AF87D7", bold = true }
+tab_inactive = { fg = "#8F84A6", bg = "#221C34" }
+tab_width    = 1
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#5E4A7F" }
+
+# Highlights
+syntect_theme = "~/.config/yazi/Coldark-Dark.tmTheme"
+
+
+# -------------------------------------------------
+# STATUS BAR
+# -------------------------------------------------
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#2A2342", bg = "#2A2342" }
+
+# Mode indicators
+mode_normal = { fg = "#1A1626", bg = "#AF87D7", bold = true }
+mode_select = { fg = "#1A1626", bg = "#E19B5A", bold = true }
+mode_unset  = { fg = "#1A1626", bg = "#E85A6A", bold = true }
+
+# Progress bar
+progress_label  = { fg = "#F5F0FA", bold = true }
+progress_normal = { fg = "#AF87D7", bg = "#2A2342" }
+progress_error  = { fg = "#E85A6A", bg = "#2A2342" }
+
+# Permissions
+perm_type  = { fg = "#AF87D7" }
+perm_read  = { fg = "#7BC8A4" }
+perm_write = { fg = "#E19B5A" }
+perm_exec  = { fg = "#E85A6A" }
+perm_sep   = { fg = "#5E4A7F" }
+
+
+# -------------------------------------------------
+# INPUT BOX
+# -------------------------------------------------
+
+[input]
+border   = { fg = "#AF87D7" }
+title    = { fg = "#AF87D7", bold = true }
+value    = { fg = "#F5F0FA" }
+selected = { reversed = true }
+
+
+# -------------------------------------------------
+# COMPLETION POPUP
+# -------------------------------------------------
+
+[completion]
+border   = { fg = "#5E4A7F" }
+active   = { fg = "#1A1626", bg = "#AF87D7" }
+inactive = { fg = "#C7BDD9", bg = "#221C34" }
+
+
+# -------------------------------------------------
+# TASKS PANEL
+# -------------------------------------------------
+
+[tasks]
+border  = { fg = "#5E4A7F" }
+title   = { fg = "#AF87D7", bold = true }
+hovered = { underline = true }
+
+
+# -------------------------------------------------
+# WHICH-KEY POPUP
+# -------------------------------------------------
+
+[which]
+mask            = { bg = "#1A1626" }
+cand            = { fg = "#AF87D7" }
+rest            = { fg = "#8F84A6" }
+desc            = { fg = "#C7BDD9" }
+separator       = "  "
+separator_style = { fg = "#5E4A7F" }
+
+
+# -------------------------------------------------
+# FILE TYPE COLORS
+# -------------------------------------------------
+
+[filetype]
+rules = [
+  # Directories
+  { name = "*/", fg = "#AF87D7", bold = true },
+
+  # Images
+  { mime = "image/*", fg = "#E19B5A" },
+
+  # Video
+  { mime = "video/*", fg = "#D6A23A" },
+
+  # Audio
+  { mime = "audio/*", fg = "#F2C86A" },
+
+  # Archives
+  { mime = "application/zip",             fg = "#E85A6A" },
+  { mime = "application/gzip",            fg = "#E85A6A" },
+  { mime = "application/x-tar",           fg = "#E85A6A" },
+  { mime = "application/x-bzip2",         fg = "#E85A6A" },
+  { mime = "application/x-7z-compressed", fg = "#E85A6A" },
+  { mime = "application/x-rar",           fg = "#E85A6A" },
+  { mime = "application/zstd",            fg = "#E85A6A" },
+
+  # Code
+  { mime = "text/x-script.*",  fg = "#7BC8A4" },
+  { mime = "application/json", fg = "#7BC8A4" },
+  { mime = "text/html",        fg = "#7BC8A4" },
+  { mime = "text/css",         fg = "#7BC8A4" },
+  { mime = "text/javascript",  fg = "#7BC8A4" },
+
+  # Documents
+  { mime = "text/*",            fg = "#C7BDD9" },
+  { mime = "application/pdf",   fg = "#E19B5A" },
+
+  # Executables
+  { is = "exec", fg = "#7BC8A4", bold = true },
+
+  # Fallback
+  { name = "*", fg = "#C7BDD9" },
+  { name = "*/", fg = "#AF87D7", bold = true },
+]
+
+
+# -------------------------------------------------
+# ICONS (requires nerd font)
+# -------------------------------------------------
+
+[icon]
+rules = [
+  # Dirs
+  { name = ".git/",      text = "" , fg = "#E85A6A" },
+  { name = "Downloads/", text = "" , fg = "#E19B5A" },
+  { name = "Desktop/",   text = "" , fg = "#AF87D7" },
+  { name = "Documents/", text = "" , fg = "#AF87D7" },
+  { name = "Pictures/",  text = "" , fg = "#E19B5A" },
+  { name = "Music/",     text = "" , fg = "#F2C86A" },
+  { name = "Videos/",    text = "" , fg = "#D6A23A" },
+  { name = "Code/",      text = "" , fg = "#7BC8A4" },
+  { name = "*/",         text = "" , fg = "#AF87D7" },
+
+  # Files
+  { name = "*.rs",    text = "" , fg = "#E85A6A" },
+  { name = "*.py",    text = "" , fg = "#E19B5A" },
+  { name = "*.js",    text = "" , fg = "#F2C86A" },
+  { name = "*.ts",    text = "" , fg = "#7BC8A4" },
+  { name = "*.html",  text = "" , fg = "#E19B5A" },
+  { name = "*.css",   text = "" , fg = "#AF87D7" },
+  { name = "*.json",  text = "" , fg = "#F2C86A" },
+  { name = "*.toml",  text = "" , fg = "#C7BDD9" },
+  { name = "*.yaml",  text = "" , fg = "#C7BDD9" },
+  { name = "*.yml",   text = "" , fg = "#C7BDD9" },
+  { name = "*.md",    text = "" , fg = "#C7BDD9" },
+  { name = "*.pdf",   text = "" , fg = "#E85A6A" },
+  { name = "*.zip",   text = "" , fg = "#E85A6A" },
+  { name = "*.tar",   text = "" , fg = "#E85A6A" },
+  { name = "*.gz",    text = "" , fg = "#E85A6A" },
+  { name = "*.mp3",   text = "" , fg = "#F2C86A" },
+  { name = "*.flac",  text = "" , fg = "#F2C86A" },
+  { name = "*.mp4",   text = "" , fg = "#D6A23A" },
+  { name = "*.mkv",   text = "" , fg = "#D6A23A" },
+  { name = "*.png",   text = "" , fg = "#E19B5A" },
+  { name = "*.jpg",   text = "" , fg = "#E19B5A" },
+  { name = "*.jpeg",  text = "" , fg = "#E19B5A" },
+  { name = "*.gif",   text = "" , fg = "#E19B5A" },
+  { name = "*.webp",  text = "" , fg = "#E19B5A" },
+  { name = "*.sh",    text = "" , fg = "#7BC8A4" },
+  { name = "*.fish",  text = "" , fg = "#7BC8A4" },
+  { name = "*.vim",   text = "" , fg = "#7BC8A4" },
+  { name = "*.lua",   text = "" , fg = "#AF87D7" },
+  { name = "*.c",     text = "" , fg = "#AF87D7" },
+  { name = "*.cpp",   text = "" , fg = "#AF87D7" },
+  { name = "*.h",     text = "" , fg = "#AF87D7" },
+  { name = "*.go",    text = "" , fg = "#7BC8A4" },
+  { name = "*.nix",   text = "" , fg = "#7BC8A4" },
+  { name = "*.lock",  text = "" , fg = "#8F84A6" },
+  { name = ".hidden", text = "" , fg = "#8F84A6" },
+
+  # Fallback
+  { name = "*", text = "" , fg = "#C7BDD9" },
+]

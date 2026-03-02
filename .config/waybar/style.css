@@ -1,0 +1,220 @@
+/* =================================================
+   OC PALETTE — WAYBAR
+   ================================================= */
+
+@define-color oc-bg-module  rgba(52, 43, 80, 1.0);
+@define-color oc-bg-hover   rgba(68, 56, 100, 1.0);
+
+@define-color oc-accent-purple rgb(175, 135, 215);
+@define-color oc-accent-orange rgb(225, 155, 90);
+@define-color oc-error         rgb(232, 90, 106);
+
+@define-color oc-text-main     rgb(245, 240, 250);
+@define-color oc-text-muted    rgb(199, 189, 217);
+@define-color oc-text-inactive rgb(143, 132, 166);
+
+
+/* =================================================
+   GLOBAL RESET
+   ================================================= */
+
+* {
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
+  font-size: 15px;
+  color: @oc-text-main;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+}
+
+window#waybar {
+  background: transparent;
+  border: none;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+
+/* =================================================
+   MODULE BASE
+   ================================================= */
+
+#network,
+#bluetooth,
+#pulseaudio,
+#memory,
+#cpu,
+#clock,
+#custom-lock,
+#custom-reboot,
+#custom-power,
+#tray,
+#window {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-weight: bold;
+  font-size: 18px;
+  color: @oc-text-main;
+  background-color: @oc-bg-module;
+  padding: 5px 12px;
+  margin: 5px 0;
+}
+
+
+/* =================================================
+   WORKSPACES
+   ================================================= */
+
+#workspaces {
+  all: unset;
+  background-color: @oc-bg-module;
+  border-radius: 10px;
+  margin: 5px 4px 5px 6px;
+  padding: 2px 4px;
+}
+
+#workspaces button {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  background: transparent;
+  color: @oc-text-inactive;
+  padding: 3px 10px;
+  margin: 0 1px;
+  border-radius: 7px;
+}
+
+#workspaces button:hover {
+  background-color: rgba(175, 135, 215, 0.2);
+  color: @oc-text-muted;
+}
+
+#workspaces button.active {
+  background-color: rgba(175, 135, 215, 0.25);
+  color: @oc-accent-purple;
+}
+
+#workspaces button.urgent {
+  background-color: rgba(232, 90, 106, 0.25);
+  color: @oc-error;
+}
+
+
+/* =================================================
+   RIGHT PILL (network → clock)
+   ================================================= */
+
+#network {
+  border-radius: 10px 0 0 10px;
+  padding-left: 16px;
+  margin-left: 6px;
+  color: @oc-text-muted;
+}
+
+#bluetooth {
+  color: @oc-text-muted;
+}
+
+#pulseaudio {
+  color: @oc-text-muted;
+}
+
+#pulseaudio.muted {
+  color: @oc-error;
+}
+
+#memory {
+  color: @oc-accent-purple;
+}
+
+#cpu {
+  color: @oc-accent-orange;
+}
+
+#clock {
+  border-radius: 0 10px 10px 0;
+  padding-right: 16px;
+  margin-right: 6px;
+  color: @oc-accent-purple;
+}
+
+
+/* =================================================
+   LEFT POWER PILL (lock → power)
+   ================================================= */
+
+#custom-lock {
+  border-radius: 10px 0 0 10px;
+  padding-left: 16px;
+  margin-left: 4px;
+  color: @oc-accent-orange;
+}
+
+#custom-reboot {
+  color: @oc-accent-orange;
+}
+
+#custom-power {
+  border-radius: 0 10px 10px 0;
+  padding-right: 16px;
+  color: @oc-error;
+}
+
+
+/* =================================================
+   TRAY & WINDOW
+   ================================================= */
+
+#tray {
+  border-radius: 10px;
+  margin: 5px 6px;
+  padding: 5px 8px;
+}
+
+#window {
+  border-radius: 10px;
+  margin: 5px 4px;
+  color: @oc-text-muted;
+  font-style: italic;
+}
+
+
+/* =================================================
+   MPRIS CENTER PILL
+   ================================================= */
+
+#mpris {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+  background-color: @oc-bg-module;
+  border-radius: 10px;
+  padding: 5px 18px;
+  margin: 5px 0;
+  color: @oc-text-muted;
+  font-style: italic;
+}
+
+
+/* =================================================
+   HOVER
+   ================================================= */
+
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#memory:hover,
+#cpu:hover,
+#clock:hover,
+#custom-lock:hover,
+#custom-reboot:hover,
+#custom-power:hover,
+#mpris:hover,
+#tray:hover {
+  background-color: @oc-bg-hover;
+}

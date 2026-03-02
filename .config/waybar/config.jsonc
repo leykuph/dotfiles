@@ -1,0 +1,132 @@
+{
+  "layer": "top",
+  "excluse": true,
+  "position": "top",
+  "margin-top": 3,
+  "height": 42,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "tray",
+    "custom/lock",
+    "custom/reboot",
+    "custom/power"
+  ],
+  "modules-center": ["mpris"],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "memory",
+    "cpu",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    },
+    "format-icons": {
+      "1": "<span size='15000'> </span>",
+      "2": "<span size='15000'>󰣇 </span>",
+      "3": "<span size='15000'>󰈹 </span>",
+      "4": "<span size='15000'>󰇮 </span>",
+      "5": "<span size='15000'> </span>",
+      "6": "<span size='15000'> </span>",
+      "7": "<span size='15000'> </span>",
+      "8": "<span size='15000'> </span>",
+      "9": "<span size='15000'> </span>",
+      "default": "<span size='15000'>󰣇 </span>"
+    }
+  },
+  "custom/lock": {
+    "format": "<span size='15000'>󰌾</span>",
+    "on-click": "hyprlock",
+    "tooltip": true,
+    "tooltip-format": "Lock"
+  },
+  "custom/reboot": {
+    "format": "<span size='17000'></span>",
+    "on-click": "systemctl reboot",
+    "tooltip": true,
+    "tooltip-format": "Reboot"
+  },
+  "custom/power": {
+    "format": "<span size='15000'>⏻</span>",
+    "on-click": "systemctl poweroff",
+    "tooltip": true,
+    "tooltip-format": "Shut Down"
+  },
+  "network": {
+    "format-wifi": "<span size='15000'>󰤨 </span>{essid}",
+    "format-ethernet": "<span size='15000'>  </span>Wired",
+    "tooltip-format": "<span size='15000'>󰅧 </span>{bandwidthUpBytes}   <span size='15000'>󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": "<span size='15000'>󱘖 </span>{ifname} (No IP)",
+    "format-disconnected": "<span size='15000'>󰌙 </span>Disconnected",
+    "format-alt": "<span size='15000'>󰤨 </span>{signalStrength}%",
+    "interval": 1
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "<span size='15000'>󰖁 </span>Muted",
+    "format-icons": {
+      "headphone": "<span size='15000'> </span>",
+      "hands-free": "<span size='15000'>󰓃 </span>",
+      "headset": "<span size='15000'>󰋎 </span>",
+      "phone": "<span size='15000'> </span>",
+      "portable": " ",
+      "car": " ",
+      "default": ["", "󰓃", "󰋎"]
+    },
+    "on-click-right": "pavucontrol -t 3",
+    "on-click": "pactl -- set-sink-mute 0 toggle",
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%"
+  },
+  "memory": {
+    "format": "<span size='15000'>󰍛 </span>{used:0.1f}G/{total:0.1f}G",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.2f}G / {total:0.2f}G"
+  },
+  "cpu": {
+    "format": "<span size='15000'>󰍛 </span> {usage}%",
+    "tooltip": false
+  },
+  "mpris": {
+    "format": "▶ {title} - {artist}",
+    "format-paused": " {title} - {artist}",
+    "player-icons": {
+      "default": "▶",
+      "spotify": "",
+      "firefox": "󰈹",
+      "vlc": "󰕼"
+    },
+    "title-len": 20,
+    "tooltip": true,
+    "tooltip-format": "{player}: {title} - {artist}"
+  },
+  "clock": {
+    "interval": 1,
+    "timezone": "Europe/Istanbul",
+    "format": "<span size='15000'>󰥔 </span>{:%H:%M}",
+    "tooltip": true,
+    "tooltip-format": "{:%a %d/%m/%Y}"
+  },
+  "tray": {
+    "icon-size": 17,
+    "spacing": 6
+  },
+  "bluetooth": {
+    "format": "<span size='15000'>󰂯 </span>{status}",
+    "format-connected": "<span size='15000'>󰂯 </span>{device_alias}",
+    "format-connected-battery": "<span size='15000'>󰥉 </span>{device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click-right": "blueman-manager"
+  }
+}
