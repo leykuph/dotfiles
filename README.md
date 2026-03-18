@@ -14,8 +14,8 @@
 
 ## ✦ Screenshots
 
-![desktop](./screenshots/1.png)
-![desktop2](./screenshots/2.png)
+![desktop](./.screenshots/1.png)
+![desktop2](./.screenshots/2.png)
 
 ---
 
