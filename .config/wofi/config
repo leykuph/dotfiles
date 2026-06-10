@@ -13,3 +13,4 @@ insensitive=true
 columns=1
 
 # Same as the original source, no modifications made
+gtk_theme=Adwaita

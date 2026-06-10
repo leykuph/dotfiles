@@ -19,9 +19,9 @@
    ================================================= */
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo";
+  font-family: "Maple Mono NF";
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   color: @oc-text-main;
   border: none;
   border-radius: 0;
@@ -57,9 +57,9 @@ window#waybar.hidden {
 #tray,
 #window {
   all: unset;
-  font-family: "JetBrainsMono Nerd Font Propo";
+  font-family: "Maple Mono NF";
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   color: @oc-text-main;
   background-color: @oc-bg-module;
   padding: 5px 12px;
@@ -81,7 +81,7 @@ window#waybar.hidden {
 
 #workspaces button {
   all: unset;
-  font-family: "JetBrainsMono Nerd Font Propo";
+  font-family: "Maple Mono NF";
   background: transparent;
   color: @oc-text-inactive;
   padding: 3px 10px;
@@ -92,6 +92,7 @@ window#waybar.hidden {
 #workspaces button:hover {
   background-color: rgba(175, 135, 215, 0.2);
   color: @oc-text-muted;
+  font-weight: bold;
 }
 
 #workspaces button.active {
@@ -114,14 +115,17 @@ window#waybar.hidden {
   padding-left: 16px;
   margin-left: 6px;
   color: @oc-text-muted;
+  font-weight: bold;
 }
 
 #bluetooth {
   color: @oc-text-muted;
+  font-weight: bold;
 }
 
 #pulseaudio {
   color: @oc-text-muted;
+  font-weight: bold;
 }
 
 #pulseaudio.muted {
@@ -180,7 +184,8 @@ window#waybar.hidden {
   border-radius: 10px;
   margin: 5px 4px;
   color: @oc-text-muted;
-  font-style: italic;
+  font-weight: bold;
+
 }
 
 
@@ -190,14 +195,15 @@ window#waybar.hidden {
 
 #mpris {
   all: unset;
-  font-family: "JetBrainsMono Nerd Font Propo";
+  font-family: "Maple Mono NF";
   font-size: 16px;
   background-color: @oc-bg-module;
   border-radius: 10px;
   padding: 5px 18px;
   margin: 5px 0;
   color: @oc-text-muted;
-  font-style: italic;
+  font-weight: bold;
+
 }
 
 

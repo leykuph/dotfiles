@@ -18,8 +18,9 @@
    ================================================= */
 
 * {
-    font-family: "JetBrainsMono Nerd Font Propo";
-    font-size: 18px;
+    font-family: "Maple Mono NF";
+    font-size: 20px;
+    font-weight: bold;
     outline: none;
     border: none;
     text-shadow: none;
@@ -69,6 +70,9 @@ window {
    ================================================= */
 
 #input {
+    font-family: "Maple Mono NF";
+    font-size: 20px;
+    font-weight: bold;
     all: unset;
     margin: 20px;
     padding: 18px 20px;
